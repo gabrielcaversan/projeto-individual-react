@@ -27,6 +27,12 @@
     padding-right: 40px;
 }
 
+.container-direita button {
+    font-weight: 700;
+    height: 30px;
+    border-radius: 4px;
+}
+
 .container-esquerda img {
     border-radius: 50%;
 }

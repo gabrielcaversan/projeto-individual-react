@@ -31,14 +31,20 @@
     text-align: center;
 }
 
-.formulario-pagamento button {
-    margin: 20px auto 0 auto;
-    width: 100px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: #ccc;
+.formulario-pagamento-botao {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    margin-top: 25px;
 }
+
+.botao-enviar, .botao-voltar {
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #eee;
+    height: 30px;
+}
+
 
 .aprovado , .recusado {
     display: none;
@@ -58,7 +64,7 @@
 /*Transition para o modal aparecer*/
 .ReactModal__Overlay {
     opacity: 0;
-    transition: opacity 0.52s ease;
+    transition: 0.52s ease-in-out;
 }
 
 .ReactModal__Overlay--after-open{
@@ -67,4 +73,18 @@
 
 .ReactModal__Overlay--before-close{
     opacity: 0;
+}
+
+@media screen and (max-width:630px) {
+    .pagamento-cliente {
+        padding: 10px;
+    }
+
+    .formulario-pagamento input {
+        text-align: center;
+    }
+
+    .formulario-pagamento-botao {
+        gap: 5%;
+    }
 }

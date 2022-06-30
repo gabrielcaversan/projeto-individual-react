@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import './modal.css'
-import { cartoes } from '../Cartoes/Cartoes'
+import React, { useState } from "react";
+import './modal.css';
+import { cartoes } from '../Cartoes/Cartoes';
 import { Mascara } from "../Mascara/Mascara";
 
 const Modal = (props) => {
@@ -53,8 +53,8 @@ const Modal = (props) => {
 
             <div>
 
-                <form 
-                    className="formulario-pagamento" 
+                <form
+                    className="formulario-pagamento"
                     onSubmit={dadosCartao}>
 
                     <input
@@ -70,7 +70,7 @@ const Modal = (props) => {
                     <select name="cartaoEscolhido">
                         {/* Faço um map transformando os dados da array cartoes (localizada em Cartoes.jsx), depois coloco um argumento (cartao) para buscar as propriedades do objeto, no caso o "numero_cartao". */}
                         {cartoes.map((cartao) => {
-                            return ( 
+                            return (
                                 <option
                                     key={cartao.numero_cartao}
                                     value={cartao.numero_cartao}
@@ -80,19 +80,23 @@ const Modal = (props) => {
                             )
                         })}
                     </select>
-
-                    <button type="submit">Pagar</button>
+                    <div className="formulario-pagamento-botao">
+                        <button className="botao-voltar" onClick={props.botao}>Voltar</button>
+                        <button className="botao-enviar" type="submit">Efetuar pagamento</button>
+                    </div>
 
                 </form>
-                
+
             </div>
 
             {/* Divisões para pagamento aprovado ou recusado */}
             <div className="aprovado">
                 O pagamento foi concluído com <span>sucesso</span>.
+                <p ><button className="botao-voltar" onClick={props.botao}>Voltar</button></p>
             </div>
             <div className="recusado">
                 O pagamento <span>não</span> foi concluído com sucesso
+                <p><button className="botao-voltar" onClick={props.botao}>Voltar</button></p>
             </div>
         </div>
     )

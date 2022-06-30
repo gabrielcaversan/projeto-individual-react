@@ -53,7 +53,9 @@ function Usuario(props) {
             onRequestClose={FecharModal}
             style={modalCss}
         >
-            <Modal name={props.name}/>
+            <Modal 
+                name={props.name}
+                botao={FecharModal}/>
         </ReactModal>
         </>
     )
