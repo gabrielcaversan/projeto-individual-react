@@ -1,0 +1,28 @@
+.cabecalho {
+    background: linear-gradient(to top right, rgb(110, 110, 110) ,rgb(60, 60, 60));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+.cabecalho-imagem {
+    width: 50px;
+}
+
+h1 {
+    margin: 0px 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:630px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .cabecalho-imagem {
+        width: 35px;
+        padding: 0 5px;
+    }
+}
