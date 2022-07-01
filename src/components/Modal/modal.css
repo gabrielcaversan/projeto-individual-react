@@ -47,7 +47,7 @@
 
 
 .aprovado , .recusado {
-    display: none;
+    display: block;
     text-align: center;
     margin: 50px 0;
     font-size: 20px;
